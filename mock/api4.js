@@ -1,6 +1,6 @@
 const Mock = require('mockjs')
 
-let getApi1Data = (req) => {
+let getApiData = (req) => {
   // console.log(req.query);
   return Mock.mock({
       "data|1-9": [{
@@ -13,8 +13,8 @@ let getApi1Data = (req) => {
 }
 
 module.exports = {
-
-  [`GET /api1`] (req, res) {
-    res.status(200).json(getApi1Data(req))
+'GET /api4/:id' (req, res) {
+  console.log(req.params.id);
+  res.status(200).json(getApiData(req))
   }
 }

@@ -3,13 +3,13 @@ const Mock = require('mockjs')
 module.exports = {
   // 登录
   [`POST /app/v1_0/authorizations`] (req, res) {
-    res.status(200).json({
+    res.status(200).json(Mock.mock({
       "status": 200,
       "data": {
-        token: "laskdjfklsajfldsakjflsdaf",
-        refresh_token: "1woejflksdflfjlkasjdflsnf"
+        token: "@word(30, 60)",
+        refresh_token: "@word(30, 60)"
       }
-    });
+    }));
   },
   // 获取用户信息
   [`GET /app/v1_0/user`] (req, res) {
@@ -25,20 +25,6 @@ module.exports = {
         "follow_count|1-9999": 1,	
         "fans_count|1-9999": 1,		
         "like_count|1-9999": 1,
-      }
-    }))
-  },
-
-  // 获取用户频道列表
-  [`GET /app/v1_0/user/channels`] (req, res) {
-    res.status(200).json(Mock.mock({
-      data: {
-        "channels|1-20": [
-          {
-            "id|+1": 100,
-            "name": "@cword(2, 4)"
-          }
-        ]
       }
     }))
   }
