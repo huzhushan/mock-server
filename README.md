@@ -29,14 +29,15 @@
 ```js
   npm start
 ```
-访问页面：http://localhost:8090，你将会看到以下内容：
+访问页面：http://localhost:8090
+你将会看到以下内容：
 ```html
 欢迎访问mock-server，这是第一个接口返回的数据
 ```
 ## 配置接口
 - 所有的接口都在mock文件夹下配置
 - 支持模块化配置
-> 访问http://localhost:8090看到的是`第一个接口`返回的数据，打开mock文件夹下的`api1.js`可以看到`第一个接口的配置:`
+> 访问`http://localhost:8090`看到的是`第一个接口`返回的数据，打开mock文件夹下的`api1.js`可以看到`第一个接口的配置:`
 > ```js
 > module.exports = {
 >   'GET /' (req, res) {
