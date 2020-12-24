@@ -30,7 +30,7 @@ Files.keys().forEach(key => {
 for (let key in mockData) {
   let _key = key.replace(/(^\s*)|(\s*$)/g, '');
   let _method = 'get';
-  let _url = _key.replace(/^(get|post|put|delete)\s*/i, function (rs,$1) {
+  let _url = _key.replace(/^(get|post|put|delete)\s+/i, function (rs,$1) {
     _method = $1.toLowerCase();
     return '';
   })
