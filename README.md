@@ -1,6 +1,8 @@
 # mock-server
 
 基于express + mockjs的mock服务器。
+假如你的项目默认没有集成mock服务，那就可以使用本项目自己搭建mock服务。
+
 
 ## 特性
 
